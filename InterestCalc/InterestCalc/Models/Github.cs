@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace InterestCalc.ViewModel
+namespace InterestCalc.Models
 {
-    public class GithubViewModel
+    public class Github
     {
-        public string Title { get; set; }
         public string CodeLink { get; set; }
     }
 }

@@ -8,10 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Views\Shared\**" />
-    <Content Remove="Views\Shared\**" />
-    <EmbeddedResource Remove="Views\Shared\**" />
-    <None Remove="Views\Shared\**" />
+    <Compile Remove="Views\**" />
+    <Content Remove="Views\**" />
+    <EmbeddedResource Remove="Views\**" />
+    <None Remove="Views\**" />
   </ItemGroup>
 
 

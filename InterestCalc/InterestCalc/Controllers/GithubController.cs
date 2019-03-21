@@ -2,20 +2,21 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using InterestCalc.ViewModel;
+using InterestCalc.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 
 namespace InterestCalc.Controllers
 {
-    public class GithubController : Controller
+    public class GithubController : ControllerBase
     {
-        public ActionResult Index([FromServices] IConfiguration configuration)
+        [HttpGet]
+        [Route("showmethecode")]
+        public Github Index([FromServices] IConfiguration configuration)
         {
-            var viewModel = new GithubViewModel();
-            viewModel.Title = "Show me the code";
-            viewModel.CodeLink = configuration.GetSection("Github").GetValue<string>("Code");
-            return View(viewModel);
+            var model = new Github();
+            model.CodeLink = configuration.GetSection("Github").GetValue<string>("Code");
+            return model;
         }
     }
 }

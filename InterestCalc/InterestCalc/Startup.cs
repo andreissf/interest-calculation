@@ -27,7 +27,6 @@ namespace InterestCalc
         {
             services.Configure<CookiePolicyOptions>(options =>
             {
-                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
@@ -56,14 +55,8 @@ namespace InterestCalc
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
-                    name: "calculajuros",
-                    template: "{controller=Interest}/{action=Index}"
-                );
-
-                routes.MapRoute(
-                    name: "showmethecode",
-                    template: "{controller=Github}/{action=Index}"
-                );
+                    name: "relative_route",
+                    template: "");
 
                 routes.MapRoute(
                     name: "default",
